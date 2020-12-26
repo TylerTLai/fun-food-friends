@@ -63,49 +63,56 @@ class App extends Component {
     return (
       <div className="App">
         <header>
-          <GiPieSlice size={75} />
+          <GiPieSlice className='pie' />
           <h1>Fun Food Friends</h1>
         </header>
 
         <div className="container">
           <section className="food-form">
+            <h1>The Yummy Form</h1>
             <form onSubmit={this.handleSubmit}>
-              <label htmlFor='username'>Name</label>
+              <label htmlFor="username">Name</label>
               <input
                 type="text"
                 name="username"
-                id='username'
-                placeholder="what is your name?"
+                id="username"
+                placeholder="What is your name?"
                 onChange={this.handleChange}
                 value={this.state.username}
+                minLength="3"
+                maxLength="4"
+                required
               />
-              <label htmlFor='item'>Item</label>
+              <label htmlFor="item">Item</label>
               <input
                 type="text"
                 name="currentItem"
-                id='item'
-                placeholder="what are you bringing?"
+                id="item"
+                placeholder="What are you bringing?"
                 onChange={this.handleChange}
                 value={this.state.currentItem}
+                minLength="3"
+                maxLength="15"
+                required
               />
               <button>Add item</button>
             </form>
           </section>
 
           <section className="food-items">
-              <ul>
-                {this.state.items.map((item) => {
-                  return (
-                    <li key={item.id}>
-                      <h3>{item.title.toUpperCase()}</h3>
-                      <p>Brought by: {item.user}</p>
-                      <button onClick={() => this.removeItem(item.id)}>
-                        Remove item
-                      </button>
-                    </li>
-                  );
-                })}
-              </ul>
+            <ul>
+              {this.state.items.map((item) => {
+                return (
+                  <li key={item.id}>
+                    <h3>{item.title.toUpperCase()}</h3>
+                    <p>Brought by: {item.user}</p>
+                    <button onClick={() => this.removeItem(item.id)}>
+                      Remove item
+                    </button>
+                  </li>
+                );
+              })}
+            </ul>
           </section>
         </div>
       </div>
