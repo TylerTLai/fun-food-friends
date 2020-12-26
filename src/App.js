@@ -80,7 +80,7 @@ class App extends Component {
                 onChange={this.handleChange}
                 value={this.state.username}
                 minLength="3"
-                maxLength="4"
+                maxLength="20"
                 required
               />
               <label htmlFor="item">Item</label>
