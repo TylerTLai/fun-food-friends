@@ -4,11 +4,18 @@
 
 Fun Food Friends with <code>Firebase RTDB</code> is a <code>React</code> web app that allows users to log what they bring to a potluck.
 
-## Tech Stack
+👉 [Live Demo](https://fun-fewd-frenz.netlify.app/)
+
+## Technology Used
 
 - React (class components)
 - Firebase RTDB
 - Custom CSS3 styling
+
+
+## Features
+- User is able to add food items to bring to a potluck
+- Responsive web design
 
 ## Using Fun Food Friends with Firebase RTDB
 

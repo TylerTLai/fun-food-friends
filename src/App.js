@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import firebase from './firebase';
+import { GiPieSlice } from 'react-icons/gi';
 
 class App extends Component {
   constructor() {
@@ -62,48 +63,49 @@ class App extends Component {
     return (
       <div className="App">
         <header>
-          <div className="wrapper">
-            <h1>Fun Food Friends</h1>
-          </div>
+          <GiPieSlice size={75} />
+          <h1>Fun Food Friends</h1>
         </header>
 
         <div className="container">
-          <section className="add-item">
+          <section className="food-form">
             <form onSubmit={this.handleSubmit}>
+              <label htmlFor='username'>Name</label>
               <input
                 type="text"
                 name="username"
+                id='username'
                 placeholder="what is your name?"
                 onChange={this.handleChange}
                 value={this.state.username}
               />
+              <label htmlFor='item'>Item</label>
               <input
                 type="text"
                 name="currentItem"
+                id='item'
                 placeholder="what are you bringing?"
                 onChange={this.handleChange}
                 value={this.state.currentItem}
               />
-              <button>Add Item</button>
+              <button>Add item</button>
             </form>
           </section>
 
-          <section className="display-item">
-            <div className="wrapper">
+          <section className="food-items">
               <ul>
                 {this.state.items.map((item) => {
                   return (
                     <li key={item.id}>
-                      <h3>{item.title}</h3>
-                      <p>brought by: {item.user}</p>
+                      <h3>{item.title.toUpperCase()}</h3>
+                      <p>Brought by: {item.user}</p>
                       <button onClick={() => this.removeItem(item.id)}>
-                        Remove Item
+                        Remove item
                       </button>
                     </li>
                   );
                 })}
               </ul>
-            </div>
           </section>
         </div>
       </div>
