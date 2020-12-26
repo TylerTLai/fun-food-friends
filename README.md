@@ -6,6 +6,20 @@ Fun Food Friends with <code>Firebase RTDB</code> is a <code>React</code> web app
 
 👉 [Live Demo](https://fun-fewd-frenz.netlify.app/)
 
+## DESIGN UPDATE  
+
+### Before desktop:  
+![demo](https://raw.githubusercontent.com/TylerTLai/fun-food-friends/master/src/assets/demo1.png)  
+
+### Before mobile:  
+![demo](https://raw.githubusercontent.com/TylerTLai/fun-food-friends/master/src/assets/demo2.png)
+
+### After desktop:  
+![demo](https://raw.githubusercontent.com/TylerTLai/fun-food-friends/master/src/assets/demo3.png)
+
+### After mobile:  
+![demo](https://raw.githubusercontent.com/TylerTLai/fun-food-friends/master/src/assets/demo4.png)
+
 ## Technology Used
 
 - React (class components)
