@@ -50,15 +50,16 @@ header h1 {
   background-color: #fafbff;
   border-radius: 15px;
   grid-area: form;
-  padding: 5px 40px 40px 40px;
-  min-width: 200px;
   height: 400px;
+  min-width: 200px;
+  padding: 5px 40px 40px 40px;
+  width: 400px;
 }
 
 .food-form h1 {
+  color: #252525;
   font-family: 'Pacifico', cursive;
   font-size: 1.6rem;
-  color: #252525;
 }
 
 form label {
@@ -166,6 +167,10 @@ li button:hover {
       '...'
       'items';
   }
+  
+  .food-form {
+    width: 100%;
+  }
 
   ul {
     padding: 0;
@@ -180,9 +185,6 @@ li button:hover {
   .container {
     padding: 5rem 1rem;
     width: auto;
-  }
-  .food-form {
-    width: 100%;
   }
 }
 
